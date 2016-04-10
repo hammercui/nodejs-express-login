@@ -51,8 +51,9 @@ npm install
 ```
 npm start
 ```
-在浏览器输入`http://localhost:3000`打开项目
-
+在浏览器输入`http://localhost:3000`打开项目，如图
+![](https://github.com/hammercui/nodejs-express-login/raw/master/npminstall.gif)
+![](https://github.com/hammercui/nodejs-express-login/raw/master/html.gif)
 
 # 所使用到的技术
 
