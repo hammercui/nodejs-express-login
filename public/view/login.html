@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<div ui-login ng-controller="loginCtrl">
+
+<form  name="myForm" novalidate>
+    <p>账户:<br>
+        <input type="text" name="account" ng-model="account" required>
+    <span style="color:red" ng-show="myForm.account.$dirty && myForm.account.$invalid">
+    <span ng-show="myForm.account.$error.required">账户是必须的。</span>
+    </span>
+    </p>
+
+    <p>密码:<br>
+        <input type="password" name="password" ng-model="password" required>
+    <span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+    <span ng-show="myForm.password.$error.required">密码是必须的。</span>
+
+    </span>
+    </p>
+
+
+        <input type="submit" ng-disabled="myForm.account.$dirty && myForm.account.$invalid ||
+    myForm.password.$dirty && myForm.password.$invalid" ng-click="clickLogin()" value="登录">
+
+    </p>
+
+    <p ng-show="loginFail">
+        <span style="color:red">登录失败，{{failMsg}}</span>
+    </p>
+
+</form>
+</div>
